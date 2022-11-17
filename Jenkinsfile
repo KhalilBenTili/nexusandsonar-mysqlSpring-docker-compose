@@ -14,14 +14,14 @@ pipeline {
 
     stage('docker-compose nexus up') {
       steps {
-         sh 'docker-compose -f docker-composeSX.yml up -d'
+         sh 'docker-compose -f docker-composeSX.yml up -d --remove-orphans'
       
       }
     }
 
     stage('docker-compose Spring up') {
       steps {
-         sh 'docker-compose -f docker-compose.yml up -d'
+         sh 'docker-compose -f docker-compose.yml up -d --remove-orphans'
       
       }
     }    
