@@ -4,7 +4,7 @@ pipeline {
 
   stages {
 
- sstage('down docker compose') {
+ stage('down docker compose') {
       steps {
          sh 'docker-compose -f docker-composeSX.yml down '
          sh 'docker-compose -f docker-compose.yml down '
