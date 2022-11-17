@@ -12,7 +12,7 @@ pipeline {
       
       }
     }
- stage('docker-compose nexus up') {
+ stage('docker-compose spring up') {
       steps {
          sh 'docker-compose  -f docker-compose.yml up -d '
       
