@@ -13,12 +13,7 @@ pipeline {
       }
     }
 
-    stage('docker-compose Spring up') {
-      steps {
-         sh 'docker-compose -p myapp -f docker-compose.yml up -d '
-      
-      }
-    }    
+    
     
     stage('show containers ') {
       steps {
