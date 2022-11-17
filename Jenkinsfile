@@ -3,10 +3,11 @@ pipeline {
   agent any
 
   stages {
+
  sstage('down docker compose') {
       steps {
          sh 'docker-compose -f docker-composeSX.yml down '
-sh       sh 'docker-compose -f docker-compose.yml down '
+         sh 'docker-compose -f docker-compose.yml down '
       
       }
     }
@@ -38,6 +39,7 @@ sh       sh 'docker-compose -f docker-compose.yml down '
       
       }
     } 
+
 
 
 }
