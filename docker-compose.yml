@@ -11,8 +11,7 @@ services:
       - "3306:3306"
    volumes:
       - db:/var/lib/mysql
-   networks:
-      - common-network
+   
  app:
    container_name: spring
    image: khalilbnt/devops_project_5ds1group5:latest
@@ -31,11 +30,7 @@ services:
        "spring.jpa.hibernate.ddl-auto" : "update"}'
    stdin_open: true
    tty: true
-   networks:
-      - common-network
-networks:
-    common-network:
-        driver: bridge
+  
 
 
 
